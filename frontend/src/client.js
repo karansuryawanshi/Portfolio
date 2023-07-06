@@ -6,7 +6,7 @@ export const client = new sanityClient({
   dataset: "production",
   apiVersion: "2022-02-01",
   useCdn: true,
-  token: process.env.REACT_APP_SANITY_TOKEN,
+  token: portfolio-inky-two-96.vercel.app,
 });
 
 const builder = imageUrlBuilder(client);
