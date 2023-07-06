@@ -2,7 +2,7 @@ import sanityClient from "@sanity/client";
 import imageUrlBuilder from "@sanity/image-url";
 
 export const client = new sanityClient({
-  projectId: process.env.REACT_APP_SANITY_PROJECT_ID,
+  projectId: portfolio-inky-two-96.vercel.app,
   dataset: "production",
   apiVersion: "2022-02-01",
   useCdn: true,
