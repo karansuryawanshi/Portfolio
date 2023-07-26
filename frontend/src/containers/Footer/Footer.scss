@@ -1,8 +1,11 @@
+#contact{
+  background-color: #edf2f8;
+}
+
 .app__footer {
   flex: 1;
   width: 100%;
   flex-direction: column;
-
   @media screen and (max-width: 768px) {
     flex-direction: column;
   }
@@ -32,7 +35,11 @@
     padding: 1rem;
     border-radius: 10px;
     cursor: pointer;
-    background-color: #fef4f5;
+    // background-color: var(--white-color)
+    // background-color: var(--white-color);
+
+    // background-color: #fef4f5;
+    background-color: white;
 
     transition: all 0.3s ease-in-out;
 
@@ -50,7 +57,8 @@
       font-weight: 500;
     }
     &:hover {
-      box-shadow: 0 0 25px #fef4f5;
+      // box-shadow: 0 0 25px #fef4f5;
+      box-shadow: 0 0 25px #ffffff;
     }
 
     @media screen and (max-width: 450px) {
@@ -64,11 +72,13 @@
 }
 
 .app__footer-cards .app__footer-card:last-child {
-  background-color: #f2f7fb;
+  // background-color: #f2f7fb;
+  background-color: var(--white-color);
 }
 
 .app__footer-cards .app__footer-card:last-child:hover {
-  box-shadow: 0 0 25px #f2f7fb;
+  // box-shadow: 0 0 25px #f2f7fb;
+  background-color: var(--white-color);
 }
 
 .app__footer-form {
@@ -92,7 +102,8 @@
       padding: 0.95rem;
       border: none;
       border-radius: 7px;
-      background-color: var(--primary-color);
+      // background-color: var(--primary-color);
+      
 
       font-family: var(--font-base);
       color: var(--secondary-color);
