@@ -38,6 +38,7 @@ import logo4 from "../assests/logo4.png";
 // import profile1 from "../assests/profile1.png";
 // import profile3 from "../assests/profile3.png";
 import profile6 from "../assests/profile6.png";
+import profile_1 from "../assests/profile_1.png";
 
 export default {
   email,
@@ -80,4 +81,5 @@ export default {
   // profile1,
   // profile3,
   profile6,
+  profile_1,
 };
