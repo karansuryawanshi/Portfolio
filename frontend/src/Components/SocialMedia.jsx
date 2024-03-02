@@ -2,6 +2,7 @@ import React from 'react'
 import {BsTwitter , BsInstagram} from 'react-icons/bs';
 import {FaFacebookF} from 'react-icons/fa';
 import {FaLinkedin} from 'react-icons/fa'
+import { VscGithub } from "react-icons/vsc";
 
 const SocialMedia = () => {
   return (
@@ -11,17 +12,16 @@ const SocialMedia = () => {
          
       </div>
       <div>
-        <a href="https://www.facebook.com/karan.suryawanshi.9847" target='_blank'><FaFacebookF/></a>
+        <a href="https://github.com/karansuryawanshi" target='_blank'><VscGithub /></a>
           
       </div>
-      <div>
+      {/* <div>
         <a href="https://instagram.com/karansuryawanshi3?igshid=ZDdkNTZiNTM=" target='_blank'><BsInstagram/></a> 
          
-      </div>
-      {/* <div>
-        <a href="https://linkedin.com" target='_blank'><FaLinkedin/></a> 
-         
       </div> */}
+      <div>
+        <a href="https://www.linkedin.com/in/karan-suryawanshi-1b1786267/" target='_blank'><FaLinkedin/></a> 
+      </div>
     </div>
   )
 }
