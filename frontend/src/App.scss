@@ -102,7 +102,6 @@
     justify-content: flex-end;
     align-items: center;
     flex-direction: column;
-  
     padding: 1rem;
   
     div {
@@ -112,11 +111,9 @@
       background-color: var(--white-color);
       margin: 0.25rem 0;
       border: 1px solid var(--lightGray-color);
-  
       display: flex;
       justify-content: center;
       align-items: center;
-  
       transition: all 0.3s ease-in-out;
   
       svg {

@@ -1,0 +1,41 @@
+// .preloader_head {
+//     display: flex;
+//     justify-content: center;
+//     align-items: center;
+//     height: 100vh; /* Full viewport height */
+//   }
+  
+//   .preloader_main {
+//     text-align: center; /* Center text within the container */
+//   }
+
+
+.preloader_head {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Full viewport height */
+  }
+  
+  .preloader_main {
+    text-align: center; /* Center text within the container */
+    animation: zoomIn 3s ease-in-out forwards;
+  }
+  
+  @keyframes zoomIn {
+    0% {
+      transform: scale(0); 
+    }
+    100% {
+      transform: scale(3);
+    }
+  }
+  
+  /* Additional styling for the preloader text */
+  .preloader_main h1 {
+    margin: 10px 0; /* Add some margin between each heading */
+    font-size: 24px; /* Adjust font size as needed */
+    font-size: 60px;
+  }
+  
+  

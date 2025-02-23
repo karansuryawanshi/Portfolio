@@ -1,4 +1,4 @@
-#contact{
+#contact {
   background-color: rgb(237, 242, 248);
 }
 
@@ -11,7 +11,7 @@
   }
 }
 
-.mail_footer{
+.mail_footer {
   width: 60%;
   height: 60%;
 }
@@ -58,7 +58,7 @@
     }
     &:hover {
       // box-shadow: 0 0 25px #fef4f5;
-      box-shadow: 0 0 25px #ffffff;
+      box-shadow: 0 0 25px #d6d6d6;
     }
 
     @media screen and (max-width: 450px) {
@@ -103,7 +103,6 @@
       border: none;
       border-radius: 7px;
       // background-color: var(--primary-color);
-      
 
       font-family: var(--font-base);
       color: var(--secondary-color);
