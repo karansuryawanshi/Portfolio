@@ -18,8 +18,8 @@ const Main = () => {
       <About></About>
       <Work></Work>
       <Skills></Skills>
-      {/* <Certification></Certification> */}
       {/* <Testimonial></Testimonial> */}
+      <Certification></Certification>
       <Footer></Footer>
     </div>
   );

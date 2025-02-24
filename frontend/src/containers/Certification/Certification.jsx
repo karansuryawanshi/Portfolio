@@ -4,6 +4,9 @@ import { motion } from "framer-motion";
 import { AppWrap, MotionWrap } from "../../wrapper";
 import { urlFor, client } from "../../client";
 import "./Certification.scss";
+import Certification1 from "../../assests/certification1.png";
+import Certification2 from "../../assests/certification4.png";
+import Certification3 from "../../assests/certification3.png";
 
 const Certification = () => {
   const [works, setWorks] = useState([]);
@@ -35,87 +38,86 @@ const Certification = () => {
 
   return (
     <>
-      <h2 className="head-text">
-        My Creative <span>Project</span> Section
-      </h2>
-      <div className="app__work-filter">
-        {["MERN", "Next JS", "PHP", "AI", "All"].map((item, index) => (
-          <div
-            key={index}
-            onClick={() => handleWorkFilter(item)}
-            className={`app__work-filter-item app__flex p-text ${
-              activeFilter === item ? "item-active" : ""
-            }`}
-          >
-            {item}
-          </div>
-        ))}
-      </div>
-
-      <motion.div
-        animate={animateCard}
-        transition={{ duration: 0.5, delayChildren: 0.5 }}
-        className="app__work-portfolio"
-      >
-        {filterWork.map((work, index) => (
-          <div className="app__work-item app__flex" key={index}>
-            <div className="app__work-img app__flex">
-              {work.imgUrl && <img src={urlFor(work.imgUrl)} alt={work.name} />}
-              <motion.div
-                whileHover={{ opacity: [0, 1] }}
-                transition={{
-                  duration: 0.25,
-                  ease: "easeInOut",
-                  staggerChildren: 0.5,
-                }}
-                className="app__work-hover app__flex"
-              >
-                {work.projectLink && (
-                  <a href={work.projectLink} target="_blank" rel="noreferrer">
-                    <motion.div
-                      whileInView={{ scale: [0, 1] }}
-                      whileHover={{ scale: [1, 0.9] }}
-                      transition={{ duration: 0.25 }}
-                      className="app__flex"
-                    >
-                      <AiFillEye />
-                    </motion.div>
-                  </a>
-                )}
-                {work.codeLink && (
-                  <a href={work.codeLink} target="_blank" rel="noreferrer">
-                    <motion.div
-                      whileInView={{ scale: [0, 1] }}
-                      whileHover={{ scale: [1, 0.9] }}
-                      transition={{ duration: 0.25 }}
-                      className="app__flex"
-                    >
-                      <AiFillGithub />
-                    </motion.div>
-                  </a>
-                )}
-              </motion.div>
-            </div>
-            <div className="app__work-content app__flex">
-              <h4 className="bold-text">{work.title}</h4>
-              <p className="p-text" style={{ marginTop: 10 }}>
-                {work.description}
+      <div className="Certification_Container">
+        <h2 className="head-text">
+          {/* Certifications */}
+          <span>Certifications</span>
+        </h2>
+        <div className="Certification_Cards">
+          <div className="Certification_Card">
+            <img className="Certification_Image" src={Certification1} alt="" />
+            <p>
+              <h4>Data Structure and Algorithm</h4>
+              <p>
+                Completed Data Structures and Algorithms course, mastering
+                sorting, searching, recursion, dynamic programming, and
+                problem-solving for optimized code efficiency.
               </p>
-              <div className="app__work-tag app__flex">
-                {work.tags && work.tags[0] && (
-                  <p className="p-text">{work.tags[0]}</p>
-                )}
-              </div>
+            </p>
+            <div className="Certification_Buttons">
+              {/* <a href="">
+              <button>Preview</button>
+              </a> */}
+              <a
+                href="https://drive.google.com/file/d/1wxrdTyMLUiZfsI7rOtp_RGtFuFyLZxh9/view?usp=sharing"
+                target="_blank"
+              >
+                <button>View</button>
+              </a>
             </div>
           </div>
-        ))}
-      </motion.div>
+          <div className="Certification_Card">
+            <img className="Certification_Image" src={Certification2} alt="" />
+            <p>
+              <h4>Git and GitHub: Mastering Version Control</h4>
+              <p>
+                Completed Git and GitHub: Mastering Version Control from
+                Internshala, learning branching, merging, pull requests, and
+                repository management for efficient collaboration.
+              </p>
+            </p>
+            <div className="Certification_Buttons">
+              {/* <a href="">
+                <button>Preview</button>
+              </a> */}
+              <a
+                href="https://trainings.internshala.com/view_certificate/3pqgfofth6i/49j7rouilxi/"
+                target="_blank"
+              >
+                <button>View</button>
+              </a>
+            </div>
+          </div>
+          <div className="Certification_Card">
+            <img className="Certification_Image" src={Certification3} alt="" />
+            <p>
+              <h4>Google IT Automation</h4>
+              <p>
+                Google IT Support Certificate covers troubleshooting,
+                networking, OS, system administration, security, and customer
+                service for entry-level IT roles.
+              </p>
+            </p>
+            <div className="Certification_Buttons">
+              {/* <a href="">
+                <button>Preview</button>
+              </a> */}
+              <a
+                href="https://www.coursera.org/account/accomplishments/professional-cert/4U8F2FR8UAQ5?utm_source=link&utm_medium=certificate&utm_content=cert_image&utm_campaign=pdf_header_button&utm_product=prof"
+                target="_blank"
+              >
+                <button>View</button>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
     </>
   );
 };
 
 export default AppWrap(
-  MotionWrap(Certification, "app__works"),
+  MotionWrap(Certification, "app__Certifications"),
   "Certification",
   "app__primarybg"
 );

@@ -1,6 +1,6 @@
-#contact {
-  background-color: rgb(237, 242, 248);
-}
+// #contact {
+//   background-color: rgb(237, 242, 248);
+// }
 
 .app__footer {
   flex: 1;
@@ -38,8 +38,8 @@
     // background-color: var(--white-color)
     // background-color: var(--white-color);
 
-    // background-color: #fef4f5;
-    background-color: white;
+    background-color: #fef4f5;
+    // background-color: white;
 
     transition: all 0.3s ease-in-out;
 
@@ -72,13 +72,14 @@
 }
 
 .app__footer-cards .app__footer-card:last-child {
-  // background-color: #f2f7fb;
-  background-color: var(--white-color);
+  background-color: #f2f7fb;
+  // background-color: var(--white-color);
 }
 
 .app__footer-cards .app__footer-card:last-child:hover {
-  // box-shadow: 0 0 25px #f2f7fb;
-  background-color: var(--white-color);
+  box-shadow: 0 0 25px #f2f7fb;
+  box-shadow: 0 0 25px #d6d6d6;
+  // background-color: var(--white-color);
 }
 
 .app__footer-form {
@@ -88,7 +89,6 @@
 
   div {
     width: 100%;
-
     margin: 0.75rem 0;
     border-radius: 10px;
     cursor: pointer;
@@ -102,7 +102,7 @@
       padding: 0.95rem;
       border: none;
       border-radius: 7px;
-      // background-color: var(--primary-color);
+      background-color: var(--primary-color);
 
       font-family: var(--font-base);
       color: var(--secondary-color);

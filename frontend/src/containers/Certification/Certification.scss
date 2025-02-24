@@ -1,156 +1,72 @@
-.app__works {
-  flex: 1;
-  width: 100%;
+.Certification_Container{
+  display: flex;
   flex-direction: column;
+  font-family: var(--font-base);
 }
 
-.app__work-filter {
+.Certification_Cards{
   display: flex;
   flex-direction: row;
-  justify-content: flex-start;
-  align-items: center;
   flex-wrap: wrap;
-
-  margin: 4rem 0 2rem;
-
-  .app__work-filter-item {
-    padding: 0.5rem 1rem;
-    border-radius: 0.5rem;
-    background-color: #fff;
-    color: #000;
-    font-weight: 800;
-
-    cursor: pointer;
-    transition: all 0.3s ease;
-    margin: 0.5rem;
-
-    &:hover {
-      background-color: var(--secondary-color);
-      color: #fff;
-    }
-
-    @media screen and (min-width: 2000px) {
-      padding: 1rem 2rem;
-      border-radius: 0.85rem;
-    }
-  }
-
-  .item-active {
-    background-color: var(--secondary-color);
-    color: #fff;
-  }
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+  margin-top: 3rem;
 }
 
-.app__work-portfolio {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: center;
+.Certification_Card{
 
-  .app__work-item {
-    width: 270px;
+  width: 270px;
     flex-direction: column;
-
     margin: 2rem;
     padding: 1rem;
     border-radius: 0.5rem;
     background-color: #fff;
     color: #000;
-
     cursor: pointer;
-    transition: all 0.3s ease;
+    transition: all 0.3sease;
+    animation-duration: 300ms;
+    transition-duration: 300ms;
 
-    &:hover {
-      box-shadow: 0 0 25px rgba(0, 0, 0, 0.2);
+  &:hover{
+    filter: drop-shadow(0 3px 6px rgb(0 0 0 / 0.01)) drop-shadow(0 4px 8px rgb(0 0 0 / 0.2));
+  }
+  img{
+    width: 15rem;
+    max-height: 10rem;
+    border-radius: 5px;
+  }
+  p{
+    text-align: center;
+    p{
+      text-align: justify;
+      font-size: 0.8rem;
+      color: #6b7688;
+      // text-align: start;
     }
-
-    @media screen and (min-width: 2000px) {
-      width: 470px;
-      padding: 1.25rem;
-      border-radius: 0.75rem;
-    }
-
-    @media screen and (max-width: 300px) {
-      width: 100%;
-      margin: 1rem;
+    h4{
+      padding: 10px 0px;
+      font-family: var(--font-base);
     }
   }
-}
+  .Certification_Buttons{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px 0px;
 
-.app__work-img {
-  width: 100%;
-  height: 230px;
-
-  position: relative;
-
-  img {
-    width: 100%;
-    height: 100%;
-    border-radius: 0.5rem;
-    object-fit: cover;
-  }
-
-  @media screen and (min-width: 2000px) {
-    height: 350px;
-  }
-}
-
-.app__work-hover {
-  position: absolute;
-  top: 0;
-  left: 0;
-  bottom: 0;
-  right: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.5);
-
-  border-radius: 0.5rem;
-  opacity: 0;
-  transition: all 0.3s ease;
-
-  div {
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
-    background-color: rgba(0, 0, 0, 0.5);
-    color: #fff;
-
-    margin: 1rem;
-    font-family: var(--font-base);
-    font-weight: 800;
-    cursor: pointer;
-    transition: all 0.3s ease;
-
-    svg {
-      width: 50%;
-      height: 50%;
-      color: var(--white-color);
+    button{
+      padding: 10px 20px;
+      border-radius: 5px;
+      background-color: var(--secondary-color);
+      border: none;
+      color: white;
+      font-family: var(--font-base);
+      cursor: pointer;
+      &:hover{
+        background-color: #2532c1;
+      }
     }
   }
 }
 
-.app__work-content {
-  padding: 0.5rem;
-  width: 100%;
-  position: relative;
-  flex-direction: column;
-
-  h4 {
-    margin-top: 1rem;
-    line-height: 1.5;
-
-    @media screen and (min-width: 2000px) {
-      margin-top: 3rem;
-    }
-  }
-
-  .app__work-tag {
-    position: absolute;
-
-    padding: 0.5rem 1rem;
-    border-radius: 10px;
-    background-color: #fff;
-    top: -25px;
-  }
-}
