@@ -7,6 +7,7 @@ import {
   Testimonial,
   Work,
   Certification,
+  Profiles,
 } from "../containers";
 import { Navbar } from "../Components";
 
@@ -17,6 +18,7 @@ const Main = () => {
       <Header></Header>
       <About></About>
       <Work></Work>
+      <Profiles></Profiles>
       <Skills></Skills>
       {/* <Testimonial></Testimonial> */}
       <Certification></Certification>

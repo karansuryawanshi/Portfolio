@@ -1,10 +1,10 @@
-import React, { useState, useEffect } from 'react';
-import { motion } from 'framer-motion';
+import React, { useState, useEffect } from "react";
+import { motion } from "framer-motion";
 // import {Tooltip as ReactTooltip} from 'react-tooltip';
-import {Tooltip} from 'react-tooltip';
-import { AppWrap, MotionWrap } from '../../wrapper';
-import { urlFor, client } from '../../client';
-import './Skills.scss';
+import { Tooltip } from "react-tooltip";
+import { AppWrap, MotionWrap } from "../../wrapper";
+import { urlFor, client } from "../../client";
+import "./Skills.scss";
 
 const Skills = () => {
   const [experiences, setExperiences] = useState([]);
@@ -36,10 +36,7 @@ const Skills = () => {
               className="app__skills-item app__flex"
               key={skill.name}
             >
-              <div
-                className="app__flex"
-                style={{ backgroundColor: skill.bgColor }}
-              >
+              <div className="app__flex" style={{ backgroundColor: "#ffffff" }}>
                 <img src={urlFor(skill.icon)} alt={skill.name} />
               </div>
               <p className="p-text">{skill.name}</p>
@@ -48,10 +45,7 @@ const Skills = () => {
         </motion.div>
         <div className="app__skills-exp">
           {experiences.map((experience) => (
-            <motion.div
-              className="app__skills-exp-item"
-              key={experience.year}
-            >
+            <motion.div className="app__skills-exp-item" key={experience.year}>
               <div className="app__skills-exp-year">
                 <p className="bold-text">{experience.year}</p>
               </div>
@@ -75,7 +69,7 @@ const Skills = () => {
                       arrowColor="#fff"
                       className="skills-tooltip"
                     >
-                    <p>{work.desc}</p>  
+                      <p>{work.desc}</p>
                     </Tooltip>
                   </>
                 ))}
@@ -89,8 +83,7 @@ const Skills = () => {
 };
 
 export default AppWrap(
-  MotionWrap(Skills, 'app__skills'),
-  'skills',
-  'app__whitebg',
+  MotionWrap(Skills, "app__skills"),
+  "skills",
+  "app__primarybg"
 );
-

@@ -1,0 +1,253 @@
+.Leetcode_profile_header{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 500;
+    font-size: 2rem;
+}
+
+.Leetcode_profiles_card_header{
+    display: flex;
+    gap: 15px;
+
+    img{
+        border-radius: 10px;
+    }
+
+    .Leetcode_profiles_name h3{
+        color: rgb(255, 255, 255);
+        font-weight: 400;
+        font-size: 20px;
+    }
+    .Leetcode_profiles_name p{
+        color: rgba(255, 255, 255, 0.626);
+    }
+}
+
+.Leetcode_profile_stats{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px; 
+    margin: 15px 0px 15px 0px;
+
+    // ------------------------
+    padding: 4px;
+    overflow: hidden;
+
+    // ------------------------
+
+    p{
+        background: rgba(255, 255, 255, 0.1);
+        color: rgba(255, 255, 255, 0.811);
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        border: 1px solid #ffffff1a;
+        transition: all 0.3s ease;
+        border-radius: 10px;
+        padding: 8px;
+        text-align: center;
+        overflow: hidden;
+    }
+}
+
+.g_chat{
+    margin: 15px 0 15px 0;
+}
+
+.Leetcode_commits{
+    display: flex;
+    gap: 10px;
+    margin-bottom: 6px;
+    padding: 4px;
+    border-radius: 10px;
+
+    .Arrows{
+        background-color: rgba(255, 255, 255, 0.1);
+        color: aliceblue;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 10px;
+        padding: 6px 8px 6px 8px;
+    }
+
+    .Leetcode_commit_action{
+        color: aliceblue;
+        font-size: 1.1rem;
+    }
+    .Leetcode_commit_time{
+        color: rgba(254, 254, 254, 0.495);
+        font-size: 14px;
+    }
+}
+
+.Leetcode_commits:hover{
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+
+.Leetcode_commits{
+    display: flex;
+    gap: 10px;
+    margin-bottom: 6px;
+    padding: 4px;
+    border-radius: 10px;
+    margin-top: 8px;
+
+    .Arrows{
+        background-color: rgba(255, 255, 255, 0.1);
+        color: aliceblue;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 10px;
+        padding: 6px 8px 6px 8px;
+    }
+
+    .Leetcode_commit_action{
+        color: aliceblue;
+        font-size: 1.1rem;
+    }
+    .Leetcode_commit_time{
+        color: rgba(254, 254, 254, 0.495);
+        font-size: 14px;
+    }
+}
+
+.Leetcode_commits:hover{
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.LeetcodeChart_day{
+    width: 8px;
+    height: 8px;
+}
+
+.Leetcode_profile_stats p::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background: linear-gradient(90deg, #4ade80, #22d3ee, #a855f7);
+    transform: scaleX(0);
+    transition: transform 0.3s ease;
+        }
+
+   .Leetcode_profile_stats p:hover::before {
+       transform: scaleX(1);
+   }
+
+   .Leetcode_profile_stats p:hover {
+       transform: translateY(-5px);
+       background: rgba(255, 255, 255, 0.15);
+   }
+
+
+   
+.Leetcode_profiles_name p {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    cursor: pointer;
+    position: relative;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    padding: 0px 0;
+    color: #7d8590; 
+}
+ 
+.Leetcode_profiles_name p::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-image: repeating-linear-gradient(
+        to right,
+        #0077ff 0,        /* GitHub blue color */
+        #0077ff 4px,
+        transparent 4px,
+        transparent 8px
+    );
+    transition: width 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+// .leetcode_profiles_name p span:first-child a {
+//   transition: color 0.3s ease, transform 0.3s ease;
+//   background-color: #4ade80;
+// }
+
+// .leetcode_profiles_name p:hover span:first-child a {
+//   color: #58a6ff;
+//   transform: translateY(-1px);
+// }
+
+// .Leetcode_profiles_name p span{
+//     background-color: #4ade80;
+// }
+
+.Leetcode_profiles_name p:hover {
+    color: #0077ff; 
+    transform: translateY(-1px);
+}
+
+.Leetcode_profiles_name p:hover::after {
+    width: 100%;
+}
+
+.Leetcode_profiles_name p span:last-child {
+    opacity: 0;
+    font-size: 4px;
+    transform: translateX(-5px) scale(0.8);
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.Leetcode_profiles_name p:hover span:last-child {
+    opacity: 1;
+    transform: translateX(0) scale(1);
+    font-size: 4px;
+}
+
+@media (max-width: 768px) {
+  .Leetcode_profile_stats{
+    grid-template-columns: 1fr ;
+    font-size: 10px;
+  }
+  .LeetcodeChart_day{
+    width: 5px;
+    height: 5px;
+  }
+  .Leetcode_profile_header{
+    font-size: 1.2rem;
+  }
+}
+
+@media (max-width: 444px) {
+    .Leetcode_profiles_card_header .Leetcode_profiles_name h3{
+        font-size: 18px;
+    }
+
+    .Leetcode_profiles_card_header .Leetcode_profiles_name p {
+        font-size: 15px;
+    }
+
+    .LeetcodeChart_day{
+        display: none;
+    }
+
+    .Leetcode_commits .Leetcode_commit_action {
+        font-size: 0.8rem;
+    }
+
+    .Leetcode_commits .Leetcode_commit_time{
+        font-size: 0.7rem;
+    }
+
+    .Leetcode_profile_stats{
+        font-size: 14px;
+    }
+}

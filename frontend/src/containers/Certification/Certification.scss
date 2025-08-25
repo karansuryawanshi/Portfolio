@@ -1,72 +1,106 @@
-.Certification_Container{
+.Certification_Container {
   display: flex;
   flex-direction: column;
   font-family: var(--font-base);
+
+  .head-text {
+    margin: 15px 0px 15px 0px;
+  }
+
+  .head-text span:first-child {
+    color: #030303;
+  }
+
 }
 
-.Certification_Cards{
+.Certification_Cards {
   display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
+  flex-direction: column;
+  gap: 2rem;
   align-items: center;
   justify-content: center;
-  gap: 30px;
-  margin-top: 3rem;
-}
+  width: 100%;
 
-.Certification_Card{
+  .Certification_Card {
+    width: 60%;
+    background-color: #edf2f8;
+    padding: 20px;
+    border-radius: 10px;
+    // box-shadow: #373737;
+    transition: all 0.3s ease;
+    border: 1px solid #c5dcf9;
+    // box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
 
-  width: 270px;
-    flex-direction: column;
-    margin: 2rem;
-    padding: 1rem;
-    border-radius: 0.5rem;
-    background-color: #fff;
-    color: #000;
-    cursor: pointer;
-    transition: all 0.3sease;
-    animation-duration: 300ms;
-    transition-duration: 300ms;
+    &:hover {
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.169);
+    }
 
-  &:hover{
-    filter: drop-shadow(0 3px 6px rgb(0 0 0 / 0.01)) drop-shadow(0 4px 8px rgb(0 0 0 / 0.2));
-  }
-  img{
-    width: 15rem;
-    max-height: 10rem;
-    border-radius: 5px;
-  }
-  p{
-    text-align: center;
-    p{
+    .Certification_Card_Description {
+      margin: 10px 0 10px 0;
       text-align: justify;
-      font-size: 0.8rem;
-      color: #6b7688;
-      // text-align: start;
-    }
-    h4{
-      padding: 10px 0px;
-      font-family: var(--font-base);
     }
   }
-  .Certification_Buttons{
+
+  .Certification_Card_Heading {
+    display: flex;
+    align-items: center;
+    font-size: 18px;
+    gap: 10px;
+  }
+
+  .Certification_Card_Heading div p:last-child {
+    font-size: 15px;
+    color: #373737;
+  }
+
+  .Certification_Card_Footer {
     display: flex;
     justify-content: space-between;
-    align-items: center;
-    padding: 5px 0px;
+  }
 
-    button{
-      padding: 10px 20px;
-      border-radius: 5px;
-      background-color: var(--secondary-color);
-      border: none;
-      color: white;
-      font-family: var(--font-base);
-      cursor: pointer;
-      &:hover{
-        background-color: #2532c1;
-      }
+  .Certification_Card img {
+    width: 2.5rem;
+    height: 2.5rem;
+    background-color: #ffffff;
+    border-radius: 5px;
+    padding: 5px;
+  }
+
+  .Certification_Card_Date {
+    display: flex;
+    width: fit-content;
+    border: 2px solid rgb(217, 238, 255);
+    padding: 6px;
+    border-radius: 30px 30px 30px 30px;
+    background-color: white;
+  }
+
+  .Certification_Card_Verify {
+    display: flex;
+    width: fit-content;
+    border: 2px solid rgb(217, 238, 255);
+    padding: 6px 10px;
+    border-radius: 30px 30px 30px 30px;
+    background-color: white;
+    font-size: 1rem;
+    cursor: pointer;
+
+    a {
+      all: unset;
+      text-decoration: none;
     }
   }
 }
 
+@media (max-width: 768px){
+
+  .Certification_Cards .Certification_Card {
+      width: 80%;
+  }
+}
+
+@media (max-width: 444px){
+  .Certification_Cards .Certification_Card {
+      width: 100%;
+  }
+}

@@ -4,9 +4,8 @@ import { motion } from "framer-motion";
 import { AppWrap, MotionWrap } from "../../wrapper";
 import { urlFor, client } from "../../client";
 import "./Certification.scss";
-import Certification1 from "../../assests/certification1.png";
-import Certification2 from "../../assests/certification4.png";
-import Certification3 from "../../assests/certification3.png";
+import Google from "../../assests/Google.png";
+import Internshala from "../../assests/InternshalaLogo.png";
 
 const Certification = () => {
   const [works, setWorks] = useState([]);
@@ -40,77 +39,63 @@ const Certification = () => {
     <>
       <div className="Certification_Container">
         <h2 className="head-text">
-          {/* Certifications */}
-          <span>Certifications</span>
+          <span>My</span>
+          <span> Certifications</span>
         </h2>
-        <div className="Certification_Cards">
-          <div className="Certification_Card">
-            <img className="Certification_Image" src={Certification1} alt="" />
-            <p>
-              <h4>Data Structure and Algorithm</h4>
-              <p>
-                Completed Data Structures and Algorithms course, mastering
-                sorting, searching, recursion, dynamic programming, and
-                problem-solving for optimized code efficiency.
-              </p>
-            </p>
-            <div className="Certification_Buttons">
-              {/* <a href="">
-              <button>Preview</button>
-              </a> */}
-              <a
-                href="https://drive.google.com/file/d/1wxrdTyMLUiZfsI7rOtp_RGtFuFyLZxh9/view?usp=sharing"
-                target="_blank"
-              >
-                <button>View</button>
-              </a>
+        <section className="Certification_Cards">
+          <article className="Certification_Card">
+            <div className="Certification_Card_Heading">
+              <img src={Google} alt="Google_Logo" />
+              <div>
+                <p>Google IT Support</p>
+                <p>Google</p>
+              </div>
             </div>
-          </div>
-          <div className="Certification_Card">
-            <img className="Certification_Image" src={Certification2} alt="" />
-            <p>
-              <h4>Git and GitHub: Mastering Version Control</h4>
-              <p>
-                Completed Git and GitHub: Mastering Version Control from
-                Internshala, learning branching, merging, pull requests, and
-                repository management for efficient collaboration.
-              </p>
+            <p className="Certification_Card_Description">
+              Google-certified in IT support with skills in networking, system
+              administration, troubleshooting, and software management.
             </p>
-            <div className="Certification_Buttons">
-              {/* <a href="">
-                <button>Preview</button>
-              </a> */}
-              <a
-                href="https://trainings.internshala.com/view_certificate/3pqgfofth6i/49j7rouilxi/"
-                target="_blank"
-              >
-                <button>View</button>
-              </a>
+            <div className="Certification_Card_Footer">
+              <span className="Certification_Card_Date">
+                Completed May 2024
+              </span>
+              <button className="Certification_Card_Verify">
+                <a
+                  href="https://coursera.org/share/ea716214655104c9f582a879065f08c8"
+                  target="_blank"
+                >
+                  Verify
+                </a>
+              </button>
             </div>
-          </div>
-          <div className="Certification_Card">
-            <img className="Certification_Image" src={Certification3} alt="" />
-            <p>
-              <h4>Google IT Automation</h4>
-              <p>
-                Google IT Support Certificate covers troubleshooting,
-                networking, OS, system administration, security, and customer
-                service for entry-level IT roles.
-              </p>
+          </article>
+          <article className="Certification_Card">
+            <div className="Certification_Card_Heading">
+              <img src={Internshala} alt="Internshala_Logo" />
+              <div>
+                <p>Full Stack Development</p>
+                <p>Internshala</p>
+              </div>
+            </div>
+            <p className="Certification_Card_Description">
+              Certified Full Stack Developer from Internshala Trainings with
+              hands-on projects in MERN, PHP, APIs, and DSA.
             </p>
-            <div className="Certification_Buttons">
-              {/* <a href="">
-                <button>Preview</button>
-              </a> */}
-              <a
-                href="https://www.coursera.org/account/accomplishments/professional-cert/4U8F2FR8UAQ5?utm_source=link&utm_medium=certificate&utm_content=cert_image&utm_campaign=pdf_header_button&utm_product=prof"
-                target="_blank"
-              >
-                <button>View</button>
-              </a>
+            <div className="Certification_Card_Footer">
+              <span className="Certification_Card_Date">
+                Completed july 2025
+              </span>
+              <button className="Certification_Card_Verify">
+                <a
+                  href="https://trainings.internshala.com/s/v/3741549/c09ff810"
+                  target="_blank"
+                >
+                  Verify
+                </a>
+              </button>
             </div>
-          </div>
-        </div>
+          </article>
+        </section>
       </div>
     </>
   );
@@ -119,5 +104,5 @@ const Certification = () => {
 export default AppWrap(
   MotionWrap(Certification, "app__Certifications"),
   "Certification",
-  "app__primarybg"
+  "app__whitebg"
 );
