@@ -34,16 +34,6 @@ const Github = () => {
       console.error(error.message);
     }
   }
-
-  // https://api.github.com/users/karansuryawanshi
-  // https://api.github.com/search/users?q=karansuryawanshi
-  // https://api.github.com/users/karansuryawanshi/events
-  // https://gh-pinned-repos.egoist.dev/?username=karansuryawanshi
-  // https://github-contributions-api.jogruber.de/v4/karansuryawanshi
-  // https://ghchart.rshah.org/karansuryawanshi
-  // https://github-readme-streak-stats.herokuapp.com/?user=karansuryawanshi
-  // https://github-readme-stats.vercel.app/api?username=karansuryawanshi
-
   const token = process.env.REACT_APP_GITHUB_TOKEN;
 
   async function getGitHubCommit(username) {
@@ -194,9 +184,8 @@ const Github = () => {
         >
           <p>Recent Activity</p>
         </div>
-        {commit.map((item) => {
-          const now = new Date();
 
+        {commit?.map((item, index) => {
           function getTimeAgoFromISO(isoString) {
             const past = new Date(isoString).getTime();
             const now = Date.now();
@@ -213,25 +202,30 @@ const Github = () => {
             return `${days} day${days > 1 ? "s" : ""} ago`;
           }
 
+          // safe access
+          const commitMessage =
+            item?.payload?.commits && item.payload.commits.length > 0
+              ? item.payload.commits[0].message
+              : null;
+
           return (
-            <div className="Github_commits">
+            <div className="Github_commits" key={index}>
               <div className="Arrows">
                 <ArrowLeftRight />
               </div>
-              <p className="Github_commit">
+              <div className="Github_commit">
                 <p className="Github_commit_action">
                   <span>{item?.type} </span>
-                  <span>{item?.repo?.name.split("/")[1]}</span>
+                  <span>{item?.repo?.name?.split?.("/")[1]}</span>
                 </p>
-                {item.payload?.commits[0]?.message ? (
+                {commitMessage ? (
                   <span className="Github_commit_time">
-                    {item.payload?.commits[0]?.message} •{" "}
-                    {getTimeAgoFromISO(item.created_at)}
+                    {commitMessage} • {getTimeAgoFromISO(item.created_at)}
                   </span>
                 ) : (
                   <p className="Github_commit_time">No Commit Available</p>
                 )}
-              </p>
+              </div>
             </div>
           );
         })}
